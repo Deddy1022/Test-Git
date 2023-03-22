@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+	<style>
+		body{
+			font-size: 17px;
+			font-family: arial;
+			background: #f4f4f4;
+			line-height: 1.5em;
+		}
+		header{
+			background:#333;
+			color:#fff;
+			padding:20px;
+			text-align:center;
+			broder-bottom:4px #000 solid;
+			margin-bottom:10px;
+		}
+		#container{
+			width:90%;
+			margin:auto;
+			padding:10px;
+		}
+		#box{
+			background:#333;
+			color:#fff;
+			width:500;
+			height:90px;
+			padding:40px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Jquery Crash course</h1>
+	</header>
+	<div id="container" align='center'>
+		<button id="btn1">Button1</button>
+		<p class="para1">Donald John Trump [ˈdɒnəld d͡ʒɑn tɹʌmp], né le 14 juin 1946 à New York, est un homme d'affaires, animateur de télévision et homme d'État américain</p>
+
+		<p class="para2">Session terminée</p>
+		<div id="myDiv"></div>
+		<input type="text" id="newItem">
+		<ul id="list">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>zay</li>
+		</ul>
+
+		<a href="http://google.com">Google</a>
+		<ul id="users"></ul>
+	</div>
+
+	<div id="container">
+		<button id="btnFadeOut">Fade Out</button>
+		<button id="btnFadeIn">Fade In</button>
+		<button id="btnFadeTog">Fade Toggle</button>
+
+	</div>
+
+	<div id="container">
+		<button id="btnSlideDown">Slide Down</button>
+		<button id="btnSlideUp">Slide Up</button>
+		<button id="btnSlideTog">Slide Toggle</button>
+
+	</div>
+
+
+	<div id="box">World War III</div>
+
+	<script>
+		$(document).ready(function(){
+
+			$('#btn1').on('click', function(){
+				$('.para1').toggle();
+			});
+			/*$('#btn2').on('click', function(){
+				$('.para').toggle();
+			});*/
+			
+			/*$(document).on('mousemouve',function(e){
+				console.log('Coords: Y'+e.clientY+" X:"+e.clientX)
+				$('#coords').html('Coords: Y:'+e.clientY+" X:"+e.clientX);
+			});
+			$('#newItem').keyup(function(){
+				var vode = e.which;
+				if(code == 13){
+					e.preventDefault();
+					$('ul').append('<li>'+e.target.value+'</li>');
+				}
+			});
+
+			$('a').attr('target', '_blank');
+			$('a').css({'color':'orange'});
+			/*var myArr = ['Brad', 'Kelley', 'Nate', 'Jose'];
+
+			$.each(myArr, function(i, val){
+				$('#users').append('<li>'+val+'</li>');
+			});*/
+
+			/*var newArr = $('ul#list li').toArray();
+			$.each(myArr, function(i, val){
+				console.log(val.innerHTML);
+			});
+
+			$('#btnFadeOut').on('click',function(){
+				$('#box').fadeOut();
+			});
+
+			$('#btnFadeIn').on('click',function(){
+				$('#box').fadeIn();
+			});
+
+			$('#btnFadeTog').on('click',function(){
+				$('#box').fadeToggle(3000, function(){
+					$('#btnFadeTog').text('Disappear');
+				});
+				$('#box').fadeToggle(3000, function(){
+					$('#btnFadeTog').text('Fade Toggle');
+				});
+			});*/
+
+			$('#btnSlideDown').on('click', function(){
+				$('#box').slideDown();
+			});
+			$('#btnSlideUp').on('click', function(){
+				$('#box').slideUp();
+			});
+			$('#btnSlideTog').on('click', function(){
+				$('#box').slideToggle();
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+	<title></title>
+</head>
+<body>
+	<button id="button">button</button>
+	<br><br>
+	<h1>gitHub users</h1>
+	<div id="users"></div>
+	
+	<script>
+		document.getElementById('button').addEventListener('click', loadUsers);
+
+		function loadUsers(){
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'https://api.github.com/users', true);
+
+			xhr.onload = function(){
+				if(this.status == 200){
+					var users = JSON.parse(this.responseText);
+
+					var output = '';
+
+					for (var i in users) { 
+					
+						output += 
+						'<div class="user">' +
+						'<img src="'+users[i].avatar_url+'"width="70">' +
+						'<ul>'+
+						'<li>ID:' +users[i].id+ '</li>' +
+						'<li>login:' +users[i].login+ '</li>' +
+						'</ul>' +
+						'</div>';
+					}
+					document.getElementById('users').innerHTML = output;
+				}
+			}
+			xhr.send();
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+ <h2>Fading Modal</h2>
+  <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">ajouter User</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="container">
+        <form action="?controller=user&action=ajout&view=index" method="POST">
+          <div class="md-form form-ms">
+            <i class="fa fa-user prefix purple-text"></i>
+            <input type="text" name="nom" id="materialFormCardNameEx" class="form-control"><br><br>
+              <label for="materialFormCardEmailEx" class="font-weight-light">Nom</label><br>
+          </div>
+
+          <div class="md-form form-ms">
+            <i class="fa fa-user prefix purple-text"></i>
+            <input type="text" name="prenom" class="form-control"><br>
+              <label>Prenom</label><br>
+          </div>
+
+          <div class="md-form form-ms">
+            <i class="fa fa-calendar-alt prefix red-text"></i>
+            <input type="date" name="datenaiss" class="form-control">
+            <label>Date de naissance</label><br>
+          </div>
+          <div class="md-form form-ms">
+            A:<i class="fas fa-map-marker-alt prefixe grey-text"></i>
+            <input type="text" name="lieu" id="materialFormCardNameEx" class="form-control"><br>
+          </div>
+
+          <div class="md-form form-sm">
+                <i class="fa fa-envelope prefix blue-text"></i>
+              <input type="email" name="email" id="materialFormEmailModalEx1" class="form-control form-control-sm"><br>
+              <label for="materialFormEmailModalEx1">Email</label><br>
+            </div>
+
+            <div class="md-form form-sm">
+                <i class="fa fa-mobile prefix black-text"></i>
+              <input type="text" name="tel"  class="form-control"><br>
+                <label>Numero Telephone</label><br>
+            </div>
+
+          
+
+            <div class="md-form form-sm">
+              <i class="fa fa-lock prefix green-text"></i>
+                <input type="password" name="password" id="materialFormCardPasswordEx"  class="form-control"><br>
+                <label for="materialFormCardPasswordEx">Password</label><br>
+            </dir>
+
+            <div class="md-form form-ms">
+              <i class="fa fa-exclamation-triangle prefix red-text"></i>
+              <input type="password" name="confirm_password" class="form-control"><br>
+              <label>Confirm Password</label><br>
+          </div>
+          
+         
+          <div align="center"><input type="submit" name="insert" class="btn btn-cyan" value="Ajouter">
+          </div>
+          
+      </form>
+
+    </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<script>
+	$(document).ready(function(){
+		$("#deleter").on("click", function(){
+			const swalWithBootstrapButtons = Swal.mixin({
+ 				customClass: {
+    			confirmButton: 'btn btn-success',
+    			cancelButton: 'btn btn-danger'
+  				},
+ 				buttonsStyling: false
+			});
+
+			swalWithBootstrapButtons.fire({
+  				title: 'Are you sure?',
+  				text: "You won't be able to revert this!",
+  				icon: 'warning',
+  				showCancelButton: true,
+ 				confirmButtonText: 'Yes, delete it!',
+  				cancelButtonText: 'No, cancel!',
+  				reverseButtons: true
+			}).then((result) => {
+  				if (result.value) {
+   					swalWithBootstrapButtons.fire(
+      					'Deleted!',
+      					'Your file has been deleted.',
+      					'success'
+    				)
+  				} else if (
+    /* Read more about handling dismissals below */
+    				result.dismiss === Swal.DismissReason.cancel
+  				) {
+    				swalWithBootstrapButtons.fire(
+      					'Cancelled',
+      					'Your imaginary file is safe :)',
+      					'error'
+    				)
+  				}
+			});
+		});
+	});
+</script>

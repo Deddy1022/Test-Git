@@ -1,0 +1,148 @@
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fab {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400;
+}
+.bg_modal{
+	width:100%;
+	height: 100vh;
+	overflow:auto;
+	position:absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	top:0;
+	right:0.5px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	display: none;
+}
+.modal_content{
+	width:500px;
+	height: 300px;
+	background-color:oldlace;
+	border-radius:4px;
+	box-shadow: 5px;
+	top:0;
+	text-align: center;
+	padding:20px;
+	position:relative;
+	overflow:auto;
+}
+.content{
+	width:500px;
+	height: 300px;
+	background-color:oldlace;
+	border-radius:4px;
+	box-shadow: 5px;
+	top:0;
+	padding:20px;
+	position:relative;
+	overflow:auto;
+}
+
+
+#input{
+	width: 50%;
+	display: block;
+	margin: 15px auto;
+}
+
+#search{
+	position:relative;
+	top:0;
+	right:0px;
+	font-size: 13px;
+	border-radius: 13px;
+
+}
+
+.search{
+	border-radius: 13px;
+	font-size: 14px;
+
+}
+
+#btnuser{
+	position:absolute;
+	left:86%;
+}
+
+#nbreUser{
+	position:absolute;
+	left:10%;
+}
+
+#diver{
+	display:inline-block;
+}
+
+#btn_article{
+	position:absolute;
+	left:70%;
+}
+
+#btn_appro{
+	position:absolute;
+	left:60%;
+}
+
+.open{
+	position:absolute;
+	top:0;
+	right:14px;
+	font-size: 10px;
+	cursor:pointer;
+}
+
+.append_mode{
+	position:relative;
+	top:18px;
+	left:5px;
+	font-size: 30px;
+	cursor:pointer;
+}
+
+#eye{
+	position:relative;
+	top:0;
+	right:30px;;
+	font-size: 14px;
+}
+
+#eyed{
+	top:10px;
+	font-size: 14px;
+}
+
+.btn_remove{
+	position:relative;
+	top:0;
+	right:30px;
+	align-items: center;
+	font-size: 14px;
+	cursor:pointer;
+}
+#size{
+	font-size:30px;
+}
+#eye{
+
+	cursor:pointer;
+}
+

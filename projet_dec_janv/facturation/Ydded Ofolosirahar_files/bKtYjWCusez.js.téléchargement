@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["xEmkh"]); }
+
+__d("MMessagesImpressionLogger",["MRequest"],(function(a,b,c,d,e,f){"use strict";f.markSeenOnDisplay=a;function a(){var a=new(b("MRequest"))("/a/jewel_messages_read.php");a.send()}}),null);
