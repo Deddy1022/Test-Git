@@ -106,9 +106,9 @@ class usercontroller{
             $user=new user($this->db);
             $exist=$user->loginadmin($email, $password);
 
-            if($email!='deddyraharisolofo@yahoo.fr' && $password!='scorpion10'){
+            if($email!='putemalhere' && $password!='passwordhere'){
                 return false;
-            }elseif ($email=='deddyraharisolofo@yahoo.fr' && $password=='scorpion10') {
+            }elseif ($email=='putemalhere' && $password=='passwordhere') {
                 header("location:index.php?controller=user&action=index&view=index");
             }
 

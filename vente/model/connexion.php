@@ -3,7 +3,7 @@ class connexion{
 	public $server='root';
 	public $host='localhost';
 	public $pass='';
-	public $database='projet_dec_janv';
+	public $database='vente';
 
 	public $pdo;
 
